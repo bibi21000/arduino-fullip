@@ -75,4 +75,4 @@ In your sketch :
 
 That's all !!!
 
-Look at doc and examples to get more informations.
+Look at doc (http://bibi21000.gallet.info/index.php/fr/component/sphinxdoc/documentation/8-fullip-for-arduino/readme.html) and examples to get more informations.
