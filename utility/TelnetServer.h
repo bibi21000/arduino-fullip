@@ -56,7 +56,7 @@
 #include "UIPServer.h"
 #endif
 
-/// The user defined callback.
+///\brief The user defined callback for parsing commands.
 typedef uint8_t (*telnetParseCommand)(char[]);
 
 ///\brief The Telnet Server.

@@ -15,6 +15,12 @@ Usage
 Class definition
 ================
 
+.. doxygentypedef:: httpParsePage
+   :project: fullip
+
+.. doxygentypedef:: httpParseUrl
+   :project: fullip
+
 .. doxygenclass:: HttpServer
    :project: fullip
    :members:

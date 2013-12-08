@@ -13,24 +13,34 @@ Usage
 =====
 
 Define a variable dor the FTP client
+
 .. code-block:: c
 
-FtpClient ftpclient;
+ FtpClient ftpclient;
 
 Start the FTP client
+
 .. code-block:: c
 
-ftpclient.begin(server_name,user_name,password);
+ ftpclient.begin(server_name,user_name,password);
 
-Put a mail in the queue
+Send a file 
+
 .. code-block:: c
 
-smtpclient.sendMail(from,to,subject,body)
+ ftpclient.sendFile(filename2,local_dir,remote_dir)
 
-And send it in your loop
+Or retrieve one 
+
 .. code-block:: c
 
-smtpclient.maintain();
+ ftpclient.getFile(filename2,local_dir,remote_dir)
+
+And process it in your loop
+
+.. code-block:: c
+
+ ftpclient.maintain();
 
 Class definition
 ================

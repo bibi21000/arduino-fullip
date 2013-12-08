@@ -62,15 +62,18 @@
 #endif
 
 /// Used to parse a page
+/// @param EthernetClient : the client to write to
+/// @param char : the url requested by the client
+/// @param int : 
 typedef uint8_t (*httpParsePage)(EthernetClient, char[], int);
 
-/// Used to act as a rest server
-/// By default, the server wil server files on the SD
+/// \brief Used to act as a rest server
+/// By default, the server will server files on the SD
 /// The user must implement a state machine to server files
 /// The function must return 1 or the number of bytes remaining
-/// EthernetClient : the client to write to
-/// char : the url requested by the client
-/// uint8_t : the type of callback (0=connection,1=transmit data)
+/// @param EthernetClient : the client to write to
+/// @param char : the url requested by the client
+/// @param uint8_t : the type of callback (0=connection,1=transmit data)
 typedef uint8_t (*httpParseUrl)(EthernetClient, char[], char[], uint8_t);
 
 /// \brief The HTTP server. 

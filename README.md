@@ -6,6 +6,16 @@ FullIP for Arduino (https://github.com/bibi21000/arduino-fullip)
 
 FullIP is a suite of ip protocols implementation for Arduino.
 
+Applications availables :
+
+* FTP client
+
+* SMTP client
+
+* Telnet Server
+
+* HTTP server : under developpment
+
 It can be use the official ethernet shield and with Enc28j60.
 
 Copyright (C) 2013 by Sébastien GALLET <bibi21000@gmail.com>
@@ -73,4 +83,6 @@ In your sketch :
 
 That's all !!!
 
-Look at doc and examples to get more informations.
+Look at doc (http://bibi21000.gallet.info/index.php/fr/component/sphin
+xdoc/documentation/8-fullip-for-arduino/readme.html) and examples to
+get more informations.

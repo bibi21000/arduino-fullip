@@ -2,11 +2,25 @@
 FullIP Telnet Server
 ********************
 
+
+Installation
+============
+
 Download and install FullIP (Look at *Installation*).
 
-Comment #define FULLIP_SD to enable SD in FullIP.h.
+Comment #define FULLIP_SD to disable SD in FullIP.h.
+
+
+Usage
+=====
+
 
 Class definition
+================
+
+typedef uint8_t(* **telnetParseCommand**)(char[])
+
+   The user defined callback for parsing commands.
 
 *class* **TelnetServer**
 

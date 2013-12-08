@@ -2,11 +2,41 @@
 FullIP FTP Client
 *****************
 
+
+Installation
+============
+
 Download and install FullIP (Look at *Installation*).
 
 Uncomment #define FULLIP_SD to enable SD in FullIP.h.
 
+
+Usage
+=====
+
+Define a variable dor the FTP client
+
+   FtpClient ftpclient;
+
+Start the FTP client
+
+   ftpclient.begin(server_name,user_name,password);
+
+Send a file
+
+   ftpclient.sendFile(filename2,local_dir,remote_dir)
+
+Or retrieve one
+
+   ftpclient.getFile(filename2,local_dir,remote_dir)
+
+And process it in your loop
+
+   ftpclient.maintain();
+
+
 Class definition
+================
 
 *class* **FtpClient**
 
