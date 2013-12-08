@@ -28,9 +28,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 Installation
 ============
  
- - Download the library from github () and install it in your libraries
+- Download the library from github () and install it in your libraries
  
- - Update FullIP.h according to your hardware
+- Update FullIP.h according to your hardware
  
    - comment #define FULLIP_UIP to build with official shield (w5100) or
      uncomment it to build with enc28j60 and UIPEthernet
@@ -46,7 +46,6 @@ In your sketch :
 - import the Ethernet library or the UIPEthernet and the SD if needed :
  
 .. code-block:: c
- 
 // For W5100
 //You must also update FullIP/FullIP.h
 #include <SPI.h>
@@ -56,30 +55,35 @@ In your sketch :
 //#include <UIPEthernet.h>
 #include <SD.h>
 #include <FullIP.h>
-   
+
+  
 - Define a client (FTP in this example)
 
 .. code-block:: c
 
 FtpClient ftpclient;
 
+
 - Start it in your setup
 
 .. code-block:: c
 
 ftpclient.begin(server_name,user_name,password);
- 
+
+
 - Get the file
 
 .. code-block:: c
 
 ftpclient.getFile(filename,local_dir,remote_dir);
 
+
 - And process it in your loop
  
 .. code-block:: c
 
 ftpclient.maintain();
+
 
 That's all !!!
 
