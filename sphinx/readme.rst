@@ -57,6 +57,7 @@ In your sketch :
 .. code-block:: c
 
  FtpClient ftpclient;
+ ;
  
  
 
