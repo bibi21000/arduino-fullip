@@ -1,0 +1,142 @@
+
+FullIP SMTP Client
+******************
+
+Download and install FullIP (Look at *Installation*).
+
+Comment #define FULLIP_SD to enable SD in FullIP.h.
+
+Class definition
+
+*class* **SmtpClient**
+
+   The SMTP client.
+
+   *Public Functions*
+
+      uint8_t **begin**(const IPAddress & aSMTPServer, const char * domainstr)
+
+         Initialize SMTP server and domain's sender.
+
+         Initialize the smtp client.
+
+         **Return**
+            1 if the operation succeed. 0 if it fails.
+
+         **Parameters**
+            * "aSMTPServer" -
+              the IPAddress of the SMTP server.
+
+            * "domainstr" -
+              the domain to use to send emails.
+
+      uint8_t **begin**(const IPAddress & aSMTPServer, const char * domainstr, const char * authstr)
+
+         Initialize the smtp client.  Initialize SMTP server, domain's
+         sender and auth auth must be encoded
+
+         **Return**
+            1 if the operation succeed. 0 if it fails.
+
+         **Parameters**
+            * "aSMTPServer" -
+              the IPAddress of the SMTP server.
+
+            * "domainstr" -
+              the domain to use to send emails.
+
+            * "authstr" -
+              the auth string to use to authenticate (use the
+              following command to generate it : perl -MMIME::Base64
+              -e 'print
+              encode_base64("\000myuser\@yourisp.com\000password")').
+
+      uint8_t **begin**(const char * aSMTPHost, const char * domainstr)
+
+         Resolve the SMPT's server name, initialize SMTP server and
+         domain's sender.
+
+         Initialize the smtp client.
+
+         **Return**
+            1 if the operation succeed. 0 if it fails.
+
+         **Parameters**
+            * "aSMTPHost" -
+              the host name of the SMTP server.
+
+            * "domainstr" -
+              the domain to use to send emails.
+
+      uint8_t **begin**(const char * aSMTPHost, const char * domainstr, const char * authstr)
+
+         Initialize the smtp client.  Initialize SMTP server name,
+         domain's sender and auth auth must be encoded
+
+         **Return**
+            1 if the operation succeed. 0 if it fails.
+
+         **Parameters**
+            * "aSMTPHost" -
+              the host name of the SMTP server.
+
+            * "domainstr" -
+              the domain to use to send emails.
+
+            * "authstr" -
+              the auth string to use to authenticate (use the
+              following command to generate it : perl -MMIME::Base64
+              -e 'print
+              encode_base64("\000myuser\@yourisp.com\000password")').
+
+      uint8_t **end**()
+
+         Release resources. Must be called if you don't want to send
+         email anymore.  Release resources Must be called if you don't
+         want to send email anymore
+
+         **Return**
+            1 if the operation succeed. 0 if it fails.
+
+      uint8_t **sendMail**(const char * from, const char * to, const char * subject, const char * body)
+
+         Send a mail.
+
+         Send a mail.
+
+         **Return**
+            1 if the email is in the queue. 0 if it fails.
+
+         **Parameters**
+            * "from" -
+              the sender of the email.
+
+            * "to" -
+              the receiver of the email.
+
+            * "subject" -
+              the subject of the email.
+
+            * "body" -
+              the body of the email.
+
+      void **maintain**()
+
+         Send the email in "background". Must be called in your loop.
+
+         Must be called in your loop Send the mail in "background"
+
+      uint8_t **isSent**()
+
+         Show if the las mail was sent.
+
+         Was the las email sent ?
+
+         **Return**
+            1 if the email was sent.
+
+   *Public Members*
+
+      long **lastResponse**
+
+         The last response code sent by the server.

@@ -1,0 +1,78 @@
+
+FullIP Telnet Server
+********************
+
+Download and install FullIP (Look at *Installation*).
+
+Comment #define FULLIP_SD to enable SD in FullIP.h.
+
+Class definition
+
+*class* **TelnetServer**
+
+   The Telnet Server.
+
+   *Public Functions*
+
+      uint8_t **begin**(telnetParseCommand parsefunc)
+
+         Start server.
+
+         Initialize the telnet server.
+
+         **Return**
+            1 if the operation succeed. 0 if it fails.
+
+         **Parameters**
+            * "parsefunc" -
+              the callback to parse user-defined commands.
+
+      uint8_t **end**()
+
+         Release resources. Must be called if you don't want to send
+         email anymore.
+
+         **Return**
+            1 if the operation succeed. 0 if it fails.
+
+      void **maintain**()
+
+         Process client connection in "background". Must be called in
+         your loop.
+
+         Must be called in your loop Process client requests in
+         background
+
+      uint8_t **connected**()
+
+         Show if a client is connected.
+
+         Is the client connected?
+
+         **Return**
+            1 if the client is connected.
+
+      void **disconnect**()
+
+         Disconnect the client.
+
+      uint8_t **iParse**(char buffer)
+
+         Parse the buffer and call the callback.
+
+         **Return**
+            1 if the operation succeed. 0 if it fails.
+
+         **Parameters**
+            * "buffer" -
+              the command line to parse.
+
+      void **printPrompt**()
+
+         Print the prompt.
+
+   *Public Members*
+
+      EthernetClient **client**
+
+         The client.

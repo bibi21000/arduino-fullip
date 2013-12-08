@@ -1,0 +1,178 @@
+
+FullIP HTTP Server
+******************
+
+Download and install FullIP (Look at *Installation*).
+
+Uncomment #define FULLIP_SD to enable SD in FullIP.h.
+
+Class definition
+
+*class* **HttpServer**
+
+   The HTTP server.
+
+   *Public Functions*
+
+      uint8_t **begin**(char rootDir)
+
+         Start HTTP server.
+
+         **Return**
+            1 if the operation succeed. 0 if it fails.
+
+         **Parameters**
+            * "rootDir" -
+              the directory on the SD card to look for files.
+
+      uint8_t **begin**(char rootDir, httpParsePage parsepage)
+
+         Start HTTP server.
+
+         **Return**
+            1 if the operation succeed. 0 if it fails.
+
+         **Parameters**
+            * "rootDir" -
+              the directory on the SD card to look for files.
+
+            * "parsepage" -
+              the function to use for parsing pages.
+
+      uint8_t **begin**(char rootDir, httpParseUrl parseurl, httpParsePage parsepage)
+
+         Start HTTP server.
+
+         **Return**
+            1 if the operation succeed. 0 if it fails.
+
+         **Parameters**
+            * "rootDir" -
+              the directory on the SD card to look for files.
+
+            * "parseurl" -
+              the function to use for parsing urls.
+
+            * "parsepage" -
+              the function to use for parsing pages.
+
+      uint8_t **end**()
+
+         Release resources used by the Server. Must be called if you
+         don't want to send email anymore.
+
+         **Return**
+            1 if the operation succeed. 0 if it fails.
+
+      void **maintain**()
+
+         Process client connection in "background". Must be called in
+         your loop.
+
+      uint8_t **connected**()
+
+         Is a client connected
+
+         **Return**
+            1 if the client is connected.
+
+      uint8_t **iParsePage**(EthernetClient client, char buffer, int size)
+
+         Parse the page and call the page callback .
+
+         **Return**
+            1 if the operation succeed. 0 if it fails.
+
+         **Parameters**
+            * "client" -
+              the client to write to.
+
+            * "buffer" -
+              the keyword found in page.
+
+            * "size" -
+              ....
+
+      uint8_t **iParseUrl**(EthernetClient client, char myurl, uint8_t mode)
+
+         Parse the url and call the URL callback .
+
+         **Return**
+            1 if the operation succeed. 0 if it fails.
+
+         **Parameters**
+            * "client" -
+              the client to write to.
+
+            * "myurl" -
+              the url to scan.
+
+            * "mode" -
+              the mode of callback : 0=connection, 1=send data.
+
+      void **printHeader**(int code, char mime, int refresh)
+
+         Print header to the client.
+
+         **Parameters**
+            * "code" -
+              the return code (200,404, ...).
+
+            * "mime" -
+              the mime type to use (text/html, ...).
+
+            * "refresh" -
+              the delay before refreshing page. 0=No refresh.
+
+      void **printHtmlHeader**(int code, int refresh)
+
+         Print HTML header to the client.
+
+         **Parameters**
+            * "code" -
+              the return code (200,404, ...).
+
+            * "refresh" -
+              the delay before refreshing page. 0=No refresh.
+
+      void **printJsonHeader**(int code, int refresh)
+
+         Print JSON header to the client.
+
+         **Parameters**
+            * "code" -
+              the return code (200,404, ...).
+
+            * "refresh" -
+              the delay before refreshing page. 0=No refresh.
+
+      void **printAutoHeader**(char filename, int code, int refresh)
+
+         Print header to the client depending on the filename.
+
+         **Parameters**
+            * "filename" -
+              the filename (index.html, image.png, ...).
+
+            * "code" -
+              the return code (200,404, ...).
+
+            * "refresh" -
+              the delay before refreshing page. 0=No refresh.
+
+      void **autoMime**(char filename, char mime)
+
+         Retrieve the mime type from the filename.
+
+         **Parameters**
+            * "filename" -
+              the filename (index.html, image.png, ...).
+
+            * "mime" -
+              the returning mime type (text/html, image/png, ...).
+
+   *Public Members*
+
+      EthernetClient **client**
+
+         The client.
