@@ -65,8 +65,7 @@ public:
 /// Initialize the smtp client.
 /// @param aSMTPServer the IPAddress of the SMTP server.
 /// @param domainstr the domain to use to send emails.
-/// @param authstr the auth string to use to authenticate (use the following command
-/// to generate it : perl -MMIME::Base64 -e 'print encode_base64("\000myuser\@yourisp.com\000password")').
+/// @param authstr the auth string to use to authenticate.
 /// @return 1 if the operation succeed. 0 if it fails.
     uint8_t begin(const IPAddress& aSMTPServer, const char *domainstr, const char *authstr);
     

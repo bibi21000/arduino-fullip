@@ -29,8 +29,7 @@ Developp
 
 - Add your files to utility directory. Please use regular commits. It's very usefull to track bugs ;)
 
-- Comment your code !!! This comments will be added to the documentation (using doxygen).
-Look at existent files.
+- Comment your code !!! This comments will be added to the documentation (using doxygen). Look at existent files.
 
 - Write documentation !!! Look at sphinx directory.
 
