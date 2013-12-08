@@ -12,7 +12,7 @@ Comment #define FULLIP_SD to disable SD in FullIP.h.
 Usage
 =====
 
-Define a variable dor the SMTP client
+Define a variable for the SMTP client
 
 .. code-block:: c
 
@@ -48,6 +48,11 @@ And send it in your loop
 .. code-block:: c
 
  smtpclient.maintain();
+
+Full example
+============
+
+Get the full :download:`example <../examples/SmtpClient/SmtpClient.ino>`.
 
 Class definition
 ================

@@ -51,6 +51,7 @@ Install FullIP:
 In your sketch :
 
 - import the Ethernet library or the UIPEthernet and the SD if needed :
+
 .. code-block:: c
 
  // For W5100
@@ -64,21 +65,25 @@ In your sketch :
  #include <FullIP.h>
 
 - Define a client (FTP in this example)
+
 .. code-block:: c
 
  FtpClient ftpclient;
 
 - Start it in your setup
+
 .. code-block:: c
 
  ftpclient.begin(server_name,user_name,password);
 
 - Get the file
+
 .. code-block:: c
  
  ftpclient.getFile(filename,local_dir,remote_dir);
 
 - And process it in your loop
+
 .. code-block:: c
 
  ftpclient.maintain();

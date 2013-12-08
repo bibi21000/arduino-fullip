@@ -41,6 +41,12 @@ And send it in your loop
    smtpclient.maintain();
 
 
+Full example
+============
+
+Get the full "example".
+
+
 Class definition
 ================
 

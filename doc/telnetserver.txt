@@ -15,6 +15,12 @@ Usage
 =====
 
 
+Full example
+============
+
+Get the full "example".
+
+
 Class definition
 ================
 

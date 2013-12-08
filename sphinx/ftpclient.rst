@@ -12,7 +12,7 @@ Uncomment #define FULLIP_SD to enable SD in FullIP.h.
 Usage
 =====
 
-Define a variable dor the FTP client
+Define a variable for the FTP client
 
 .. code-block:: c
 
@@ -41,6 +41,11 @@ And process it in your loop
 .. code-block:: c
 
  ftpclient.maintain();
+ 
+Full example
+============
+
+Get the full :download:`example <../examples/FtpClient/FtpClient.ino>`.
 
 Class definition
 ================
