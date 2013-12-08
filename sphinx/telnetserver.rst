@@ -2,6 +2,7 @@
 FullIP Telnet Server
 ====================
 
+
 Installation
 ============
 
@@ -9,8 +10,10 @@ Download and install FullIP (Look at :doc:`installation`).
 
 Comment #define FULLIP_SD to disable SD in FullIP.h.
 
+
 Usage
 =====
+
 
 Class definition
 ================

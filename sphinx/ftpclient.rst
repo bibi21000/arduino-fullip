@@ -2,12 +2,14 @@
 FullIP FTP Client
 =================
 
+
 Installation
 ============
 
 Download and install FullIP (Look at :doc:`installation`).
 
 Uncomment #define FULLIP_SD to enable SD in FullIP.h.
+
 
 Usage
 =====
@@ -42,6 +44,7 @@ And process it in your loop
 
  ftpclient.maintain();
  
+
 Class definition
 ================
 

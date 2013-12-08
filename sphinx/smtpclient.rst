@@ -2,12 +2,14 @@
 FullIP SMTP Client
 ==================
 
+
 Installation
 ============
 
 Download and install FullIP (Look at :doc:`installation`).
 
 Comment #define FULLIP_SD to disable SD in FullIP.h.
+
 
 Usage
 =====
@@ -48,6 +50,7 @@ And send it in your loop
 .. code-block:: c
 
  smtpclient.maintain();
+
 
 Class definition
 ================

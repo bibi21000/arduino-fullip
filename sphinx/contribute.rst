@@ -6,6 +6,7 @@ You have implemented a new protocol ? You want it to be added to FullIP ?
 
 Yes we can :)
 
+
 Installation
 ============
 
@@ -21,6 +22,7 @@ You also need to install breathe, it's a bridge between doxygen and sphinx :
 .. code-block:: bash
 
  sudo pip install breathe
+
 
 Developp
 ========
