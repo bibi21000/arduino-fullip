@@ -42,31 +42,36 @@ In your sketch :
 
 - import the Ethernet library or the UIPEthernet and the SD if needed :
 .. code-block:: c
-// For W5100
-//You must also update FullIP/FullIP.h
-#include <SPI.h>
-#include <Ethernet.h> 
-//For enc28j60
-//You must also update FullIP/FullIP.h
-//#include <UIPEthernet.h>
-#include <SD.h>
-#include <FullIP.h>
+
+ // For W5100
+ //You must also update FullIP/FullIP.h
+ #include <SPI.h>
+ #include <Ethernet.h> 
+ //For enc28j60
+ //You must also update FullIP/FullIP.h
+ //#include <UIPEthernet.h>
+ #include <SD.h>
+ #include <FullIP.h>
 
 - Define a client (FTP in this example)
 .. code-block:: c
-FtpClient ftpclient;
+
+ FtpClient ftpclient;
 
 - Start it in your setup
 .. code-block:: c
-ftpclient.begin(server_name,user_name,password);
+
+ ftpclient.begin(server_name,user_name,password);
 
 - Get the file
 .. code-block:: c
-ftpclient.getFile(filename,local_dir,remote_dir);
+ 
+ ftpclient.getFile(filename,local_dir,remote_dir);
 
 - And process it in your loop
 .. code-block:: c
-ftpclient.maintain();
+
+ ftpclient.maintain();
 
 That's all !!!
 
