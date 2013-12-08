@@ -42,11 +42,6 @@ And process it in your loop
 
  ftpclient.maintain();
  
-Full example
-============
-
-Get the full :download:`example <../examples/FtpClient/FtpClient.ino>`.
-
 Class definition
 ================
 

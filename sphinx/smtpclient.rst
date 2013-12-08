@@ -49,11 +49,6 @@ And send it in your loop
 
  smtpclient.maintain();
 
-Full example
-============
-
-Get the full :download:`example <../examples/SmtpClient/SmtpClient.ino>`.
-
 Class definition
 ================
 
