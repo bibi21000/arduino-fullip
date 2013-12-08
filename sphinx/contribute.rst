@@ -14,13 +14,13 @@ launch the following command in a terminal :
 
 .. code-block:: bash
 
-	sudo apt-get install python-sphinx doxygen python-pip
+sudo apt-get install python-sphinx doxygen python-pip
 
 You also need to install breathe, it's a bridge between doxygen and sphinx :
 
 .. code-block:: bash
 
-	sudo pip install breathe
+sudo pip install breathe
 
 Developp
 ========
