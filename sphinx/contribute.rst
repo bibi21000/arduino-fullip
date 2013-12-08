@@ -4,6 +4,8 @@ Contribute
 
 You have implemented a new protocol ? You want it to be added to FullIP ?
 
+Yes we can :)
+
 Installation
 ============
 
@@ -25,11 +27,11 @@ Developp
 
 - Fork this repository.
 
-- Add your files to utility directory.
+- Add your files to utility directory. Please use regular commits. It's very usefull to track bugs ;)
 
-- Comment your code !!! This comments will be added to the documentation (using doxigen).
+- Comment your code !!! This comments will be added to the documentation (using doxygen).
 Look at existent files.
 
-- Write documentation !!! The documentation of this project is managed by (sphinx+breathe). Look at sphinx directory.
+- Write documentation !!! Look at sphinx directory.
 
 - Make your pull request
