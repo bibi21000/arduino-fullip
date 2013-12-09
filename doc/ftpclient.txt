@@ -14,11 +14,11 @@ Uncomment #define FULLIP_SD to enable SD in FullIP.h.
 Usage
 =====
 
-Define a variable for the FTP client :
+* Define a variable for the FTP client :
 
    FtpClient ftpclient;
 
-Initialize the SD and start the FTP client :
+* Initialize the SD and start the FTP client :
 
    pinMode(PIN_SD_CS, OUTPUT);
    if (!SD.begin(PIN_SD_CS)) {
@@ -28,15 +28,15 @@ Initialize the SD and start the FTP client :
    }
    ftpclient.begin(server_name,user_name,password);
 
-Send a file  :
+* Send a file  :
 
    ftpclient.sendFile(filename2,local_dir,remote_dir)
 
-Or retrieve one :
+* Or retrieve one :
 
    ftpclient.getFile(filename2,local_dir,remote_dir)
 
-And process it in your loop :
+* And process it in your loop :
 
    ftpclient.maintain();
 

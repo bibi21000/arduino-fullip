@@ -14,25 +14,25 @@ Comment #define FULLIP_SD to disable SD in FullIP.h.
 Usage
 =====
 
-Define a variable for the Telnet server :
+- Define a variable for the Telnet server :
 
 .. code-block:: c
 
  TelnetServer telnet;
 
-Start the Telnet server :
+- Start the Telnet server :
 
 .. code-block:: c
 
  telnet.begin(parse);
 
-And process client connections in your loop :
+- And process client connections in your loop :
 
 .. code-block:: c
 
  telnet.maintain();
 
-Define a callback function to parse the client commands and send result to it :
+- Define a callback function to parse the client commands and send result to it :
 
 .. code-block:: c
 

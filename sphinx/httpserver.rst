@@ -15,15 +15,15 @@ Uncomment #define FULLIP_SD to enable SD in FullIP.h.
 Usage
 =====
 
-Create a rootdir directory on your SD and copy the html files in it
+- Create a rootdir directory on your SD and copy the html files in it
 
-Define a variable for the HTTP server :
+- Define a variable for the HTTP server :
 
 .. code-block:: c
 
  HttpServer http;
 
-Initialize the SD ans start the HTTP server :
+- Initialize the SD ans start the HTTP server :
 
 .. code-block:: c
 
@@ -35,13 +35,13 @@ Initialize the SD ans start the HTTP server :
   }
   http.begin(rootdir, parseUrl, parsePage);
 
-And process client connections in your loop :
+- And process client connections in your loop :
 
 .. code-block:: c
 
   http.maintain();
 
-Define a callback function to parse the requested URL :
+- Define a callback function to parse the requested URL :
 
 .. code-block:: c
 
@@ -103,7 +103,7 @@ Define a callback function to parse the requested URL :
     return ret;
   }
 
-Define a callback function to parse the page content :
+- Define a callback function to parse the page content :
 
 .. code-block:: c
 

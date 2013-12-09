@@ -14,20 +14,20 @@ Comment #define FULLIP_SD to disable SD in FullIP.h.
 Usage
 =====
 
-Define a variable for the Telnet server :
+* Define a variable for the Telnet server :
 
    TelnetServer telnet;
 
-Start the Telnet server :
+* Start the Telnet server :
 
    telnet.begin(parse);
 
-And process client connections in your loop :
+* And process client connections in your loop :
 
    telnet.maintain();
 
-Define a callback function to parse the client commands and send
-result to it :
+* Define a callback function to parse the client commands and send
+  result to it :
 
    byte parse(char buffer[]) {
      char buff2[4];

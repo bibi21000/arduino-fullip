@@ -16,13 +16,13 @@ Uncomment #define FULLIP_SD to enable SD in FullIP.h.
 Usage
 =====
 
-Create a rootdir directory on your SD and copy the html files in it
+* Create a rootdir directory on your SD and copy the html files in it
 
-Define a variable for the HTTP server :
+* Define a variable for the HTTP server :
 
    HttpServer http;
 
-Initialize the SD ans start the HTTP server :
+* Initialize the SD ans start the HTTP server :
 
    pinMode(PIN_SD_CS, OUTPUT);
    if (!SD.begin(PIN_SD_CS)) {
@@ -32,11 +32,11 @@ Initialize the SD ans start the HTTP server :
    }
    http.begin(rootdir, parseUrl, parsePage);
 
-And process client connections in your loop :
+* And process client connections in your loop :
 
    http.maintain();
 
-Define a callback function to parse the requested URL :
+* Define a callback function to parse the requested URL :
 
    byte parseUrl(EthernetClient client, char mode[], char url[], byte state) {
      //Serial.print("freeMemory()=");
@@ -96,7 +96,7 @@ Define a callback function to parse the requested URL :
      return ret;
    }
 
-Define a callback function to parse the page content :
+* Define a callback function to parse the page content :
 
    byte parsePage(EthernetClient client, char buffer[], int bsize)
    {
