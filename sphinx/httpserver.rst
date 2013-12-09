@@ -23,7 +23,7 @@ Usage
 
  HttpServer http;
 
-- Initialize the SD ans start the HTTP server :
+- Initialize the SD and start the HTTP server :
 
 .. code-block:: c
 

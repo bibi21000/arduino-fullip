@@ -4,7 +4,8 @@ Welcome to FullIP
 
 FullIP for Arduino (https://github.com/bibi21000/arduino-fullip)
 
-FullIP is a suite of ip protocols implementation for Arduino.
+FullIP is a suite of ip protocols implementation for Arduino. It's
+compatible with Ethernet/W5100 and UIPEthernet/ENC28j60.
 
 Applications availables :
 
@@ -50,20 +51,6 @@ Install FullIP:
      uncomment it to build ftpclient, httpserver, ...
 
 In your sketch :
-
-- import the Ethernet library or the UIPEthernet and the SD if needed :
-
-.. code-block:: c
-
- // For W5100
- //You must also update FullIP/FullIP.h
- #include <SPI.h>
- #include <Ethernet.h> 
- //For enc28j60
- //You must also update FullIP/FullIP.h
- //#include <UIPEthernet.h>
- #include <SD.h>
- #include <FullIP.h>
 
 - Define a client (FTP in this example)
 
