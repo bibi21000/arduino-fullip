@@ -91,4 +91,6 @@ In your sketch :
 
 That's all !!!
 
-Look at doc (http://bibi21000.gallet.info/index.php/fr/component/sphinxdoc/documentation/8-fullip-for-arduino/readme.html) and examples to get more informations.
+Look at documentation in the doc directory and examples to get more informations.
+You can also browse the documentation online here : http://bibi21000.gallet.info/index.php/fr/component/sphinxdoc/documentation/8-fullip-for-arduino/readme.html
+

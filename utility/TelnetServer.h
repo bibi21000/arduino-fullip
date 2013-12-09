@@ -57,6 +57,7 @@
 #endif
 
 ///\brief The user defined callback for parsing commands.
+/// @param char : the command sent by the client
 typedef uint8_t (*telnetParseCommand)(char[]);
 
 ///\brief The Telnet Server.

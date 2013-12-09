@@ -6,7 +6,7 @@ FullIP SMTP Client
 Installation
 ============
 
-Download and install FullIP (Look at :doc:`installation`).
+Download and install FullIP (Look at "Installation instructions").
 
 Comment #define FULLIP_SD to disable SD in FullIP.h.
 
@@ -14,13 +14,13 @@ Comment #define FULLIP_SD to disable SD in FullIP.h.
 Usage
 =====
 
-Define a variable for the SMTP client
+Define a variable for the SMTP client :
 
 .. code-block:: c
 
  SmtpClient smtpclient;
 
-Start the SMTP client
+Start the SMTP client :
 
 .. code-block:: c
 
@@ -39,13 +39,13 @@ If you've planned to use authentication, generate the auth string using the foll
  $ perl -MMIME::Base64 -e 'print encode_base64("\000myuser\@yourisp.com\000password")'
  $ AG15dXNlckB5b3VyaXNwLmNvbQBwYXNzd29yZA==
 
-Put a mail in the queue
+Put a mail in the queue :
 
 .. code-block:: c
 
  smtpclient.sendMail(from,to,subject,body)
 
-And send it in your loop
+And send it in your loop :
 
 .. code-block:: c
 
