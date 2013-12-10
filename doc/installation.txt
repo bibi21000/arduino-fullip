@@ -24,6 +24,21 @@ FullIP is a suite of ip protocols implementation for Arduino.
   * comment #define FULLIP_SD to disable SD or uncomment it to build
     ftpclient, httpserver, ...
 
+* Import it in your sketch :
+
+* import the Ethernet library or the UIPEthernet and the SD if needed
+  :
+
+   // For W5100
+   //You must also update FullIP/FullIP.h
+   #include <SPI.h>
+   #include <Ethernet.h>
+   //For enc28j60
+   //You must also update FullIP/FullIP.h
+   //#include <UIPEthernet.h>
+   #include <SD.h>
+   #include <FullIP.h>
+
 * The pin CS are hardcoded in UIPEthernet and Ethernet libraires.
   Update the followings files if needed :
 

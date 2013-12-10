@@ -22,7 +22,7 @@ Usage
 
    HttpServer http;
 
-* Initialize the SD ans start the HTTP server :
+* Initialize the SD and start the HTTP server :
 
    pinMode(PIN_SD_CS, OUTPUT);
    if (!SD.begin(PIN_SD_CS)) {
