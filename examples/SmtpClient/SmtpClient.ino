@@ -18,15 +18,15 @@
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
  *  (at your option) any later version.
- * 
+ *
  *  This program is distributed in the hope that it will be useful,
  *  but WITHOUT ANY WARRANTY; without even the implied warranty of
  *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *  GNU General Public License for more details.
- * 
+ *
  *  You should have received a copy of the GNU General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
- * 
+ *
  */
 
 #include <SPI.h>
@@ -37,15 +37,15 @@
 
 SmtpClient smtpclient;
 unsigned long next;
-//char server_name[] = "smtp.orange.fr";
+//char server_name[] = "smtp.isp.mine";
 //The name of your SMTP server
-char server_name[] = "bibi-dom.home";
+char server_name[] = "myservername";
 //The domain that your emails will come from
-char domain_name[] = "gallet.info";
+char domain_name[] = "mydomain.com";
 //The sender
-char from[] = "pondmanager@gallet.info";
+char from[] = "myduino@mydomain.com";
 //The receiver
-char to[] = "sgallet@gmail.com";
+char to[] = "me@example.com";
 //The subject
 char subject[] = "This is the subject";
 //And the body

@@ -35,14 +35,14 @@
 //===============================
 
 ///Uncomment to build with the enc28j60 using UIPEthernet
-//#define FULLIP_UIP ///Comment this line to build with the official Ethernet library (w5100)
+#define FULLIP_UIP ///Comment this line to build with the official Ethernet library (w5100)
 
 ///Uncomment to build the ftp client and the http server 
 ///Also add SD.h to your sketch
-#define FULLIP_SD 
+//#define FULLIP_SD 
 
 /// Turn on debug messages in smtp client
-//#define FULLIP_DEBUG_SMTP
+#define FULLIP_DEBUG_SMTP
 
 ///\def  Turn on debug messages in telnet server
 //#define FULLIP_DEBUG_TELNET
